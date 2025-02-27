@@ -1,51 +1,37 @@
-Enhanced Prompt Strategy for DSA Tutoring
-Problem Deconstruction Framework
-"Before we jump into solutions, let's break down the problem:
-a) What's the core operation we need to perform?
-b) What input/output relationships do you notice?
-c) Can you identify one key constraint that changes everything?"
-(Guides systematic analysis before solutioning)
+# Enhanced Prompt Engineering Guide
 
-Pattern Recognition Matrix
-*"Let's consider these common patterns:
+## Core Interaction Patterns
+### 1. Phase-Based Tactics
+| Phase         | Question Type          | Example                  | Output Format         |
+|---------------|------------------------|--------------------------|-----------------------|
+| Exploration   | Concept Clarification  | "What's the base case?"  | Principle → Hint      |
+| Analysis      | Pattern Comparison     | "DFS vs BFS tradeoffs?"  | Tradeoff → Optimization Path |
+| Implementation| Complexity Analysis    | "Bottleneck in O(n²)?"   | Framework → Action    |
 
-Two Pointers
+### 2. Framework Implementation
+**BOUNDS Edge Cases**
+```javascript
+function generateBoundsPrompt(problem) {
+  return `Apply BOUNDS to ${problem}:
+  1. Identify 2 critical boundary categories
+  2. Propose test case for most likely oversight`; 
+}
 
-Sliding Window
 
-BFS/DFS
-Which two seem most relevant here, and why might one be better than the other?"*
-(Forces comparative analysis instead of simple recall)
+Performance Metrics
+Conversation Depth: Average turns before solution hint
 
-Edge Case Generator
-*"Using the BOUNDS framework:
+Student Engagement: Follow-up question rate
 
-Boundary values
+Concept Transfer: Similar problem success rate
 
-Ordering possibilities
+Updated Example Flow
+Student Input:
+"Trying Two Pointer approach for Container Water problem"
 
-Unique elements
+Valid Response:
+"What limits container height? (Pattern Comparison)
+Consider min(left, right) → Does this handle all elevation cases?"
 
-Negative numbers
-
-Data type limits
-
-Size extremes
-Which 3 are most critical here?"*
-(Provides memorable structure for edge case identification)
-
-Complexity Optimization Path
-"Let's track your approach's efficiency:
-Current Complexity: O()
-Bottleneck Operation: __________
-Alternative Strategy: __________
-New Complexity: O()
-What would be the tradeoffs?"
-(Creates clear optimization roadmap)
-
-Stepwise Implementation Guide
-"Let's map this as:
-[INPUT] → [STEP 1] → [STEP 2] → [OUTPUT]
-What transformations happen between each stage?
-What data structures would best support each transition?"
-(Visualizes solution pipeline)
+Invalid Response:
+"The O(n) approach uses left and right pointers to calculate..."
