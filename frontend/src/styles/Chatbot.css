@@ -1,0 +1,169 @@
+/* Full Page Background */
+body {
+  background: linear-gradient(to right, #ece9e6, #ffffff); /* Soft gradient */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Chat Container */
+.chat-container {
+  width: 420px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.8); /* Glassmorphism effect */
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Header */
+.header {
+  background: rgba(230, 230, 230, 0.8);
+  color: #333;
+  text-align: center;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Problem URL Input */
+.url-input {
+  width: 88%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  background: #f8f8f8;
+  color: #333;
+}
+
+/* Chat Area */
+.chat-area {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+  scroll-behavior: smooth;
+}
+
+/* Message Styles */
+.message {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  max-width: 80%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  word-break: break-word;
+  position: relative;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+/* User Messages */
+.message.user {
+  align-self: flex-end;
+  background: #e8f0fe; /* Soft Blue */
+  color: #333;
+  border-bottom-right-radius: 4px;
+}
+
+/* Bot Messages */
+.message.bot {
+  align-self: flex-start;
+  background: #f3e8ff; /* Soft Lavender */
+  color: #333;
+  border-bottom-left-radius: 4px;
+}
+
+/* Icons */
+.icon {
+  margin-right: 8px;
+}
+
+/* Timestamp */
+.timestamp {
+  font-size: 10px;
+  color: rgba(58, 58, 58, 0.5);
+  position: absolute;
+  bottom: 4px;
+  right: 8px;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  font-size: 14px;
+  color: gray;
+  padding: 5px;
+  animation: fadeIn 0.5s infinite alternate;
+}
+
+/* Input Form */
+.input-form {
+  display: flex;
+  padding: 12px;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+/* Text Input */
+.text-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  background: #f5f5f5;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.text-input:focus {
+  border-color: #bbb;
+  background: #ffffff;
+}
+
+/* Send Button */
+.send-button {
+  background: #d4d4d4;
+  color: #333;
+  border: none;
+  padding: 12px 14px;
+  margin-left: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.send-button:hover {
+  background: #c4c4c4;
+}
+
+/* Disabled Button */
+.send-button:disabled {
+  background: #e0e0e0;
+  cursor: not-allowed;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
