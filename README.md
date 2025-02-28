@@ -59,36 +59,35 @@ DSAchatbot
 
 Key Components
 
-Prompt Engineering: controllers/prompts.js uses structured templates
+1. Prompt Engineering: controllers/prompts.js uses structured templates
 
-AI Integration: Gemini API handler in config/gemini.js
+2. AI Integration: Gemini API handler in config/gemini.js
 
-State Management: React hooks for conversation flow
+3. State Management: React hooks for conversation flow
 
-Security: Input sanitization and rate limiting
+4. Security: Input sanitization and rate limiting
 
 Usage Guide 🚀
-Enter Problem URL
+- Enter Problem URL
 
-Paste a LeetCode/HackerRank problem link
+- Paste a LeetCode/HackerRank problem link
 
 Example: https://leetcode.com/problems/two-sum/
 
-Ask Your Question
+- Ask Your Question
 
-Type specific queries about:
+-Type specific queries about:
 
-Algorithm approaches
+ 1 Algorithm approaches
 
-Time complexity analysis
+ 2 Time complexity analysis
 
-Code structure questions
+ 3 Code structure questions
 
-Optimization strategies
+ 4 Optimization strategies
 
-AI Interaction Flow
+ AI Interaction Flow
 
-Copy
 User Question → Prompt Engineering → Gemini API → Response Validation → Formatted Output
 
 UI Features
