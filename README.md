@@ -115,6 +115,21 @@ Prompt Engineering
       return `You are an expert DSA mentor...`;
     }
 
+Key Theoretical Components:
+
+- RESTful Design: Stateless API endpoints following REST conventions
+
+- Prompt Chaining: Dynamic prompt generation based on conversation context
+
+- AI Mediation Layer:
+   -Token management for Gemini API
+   -Response length enforcement
+   -Content safety filtering
+
+- Circuit Breaker Pattern: Automatic retry mechanism for API failures
+
+- Rate Limiting: Fair usage policy implementation (60 requests/min)
+  
 -Contextual Prompts: Maintains conversation history
 
 -Response Constraints: Enforces 3-sentence maximum
