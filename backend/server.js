@@ -2,6 +2,7 @@ const express = require('express');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const dotenv = require('dotenv');
 const cors = require('cors');
+const { createPrompt } = require('../backend/controllers/prompts'); // Import the prompt generator
 
 // Load environment variables
 dotenv.config();
@@ -19,8 +20,8 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash-latest", // or "gemini-1.0-pro-latest"
     apiVersion: "v1beta" 
-  });
-  
+});
+
 // API Endpoint
 app.post('/api/ask', async (req, res) => {
   try {
@@ -30,18 +31,8 @@ app.post('/api/ask', async (req, res) => {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    const prompt = `
-      Act as a DSA teaching assistant. The user is asking about this problem:
-      ${problemUrl}
-      
-      Their specific question: ${question}
-      
-      Guidelines:
-      1. Never provide direct solutions
-      2. Ask guiding questions
-      3. Suggest relevant algorithms
-      4. Break down the problem into steps
-    `;
+    // Use the imported prompt generator
+    const prompt = createPrompt(problemUrl, question);
 
     const result = await model.generateContent(prompt);
     const response = await result.response.text();
