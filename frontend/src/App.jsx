@@ -4,7 +4,7 @@ import ChatBox from "./components/Chatbot.jsx";
 export default function App() {
   return (
     <div className="container">
-      <h2 className="text-center mt-4">Teaching Assistant AI</h2>
+      <h2 className="text-center mt-4"></h2>
       <ChatBox />
     </div>
   );
