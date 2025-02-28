@@ -43,18 +43,18 @@ cd ../frontend && npm run dev
 ```
 Architecture 
 
-DSAchatbot
-├── backend
-│   ├── config/          # Configuration files
-│   ├── controllers/     # Business logic & prompts
-│   ├── routes/          # API endpoints
-│   └── server.js        # Express server
-└── frontend
-    ├── public/          # Static assets
-    └── src/
-        ├── components/  # React components
-        ├── styles/      # CSS modules
-        └── api.jsx      # API service layer
+    DSAchatbot
+    ├── backend
+    │   ├── config/          # Configuration files
+    │   ├── controllers/     # Business logic & prompts
+    │   ├── routes/          # API endpoints
+    │   └── server.js        # Express server
+    └── frontend
+        ├── public/          # Static assets
+        └── src/
+            ├── components/  # React components
+            ├── styles/      # CSS modules
+            └── api.jsx      # API service layer
 
 
 Key Components
@@ -88,7 +88,7 @@ Example: https://leetcode.com/problems/two-sum/
 
  AI Interaction Flow
 
-User Question → Prompt Engineering → Gemini API → Response Validation → Formatted Output
+    User Question → Prompt Engineering → Gemini API → Response Validation → Formatted Output
 
 UI Features
 
@@ -101,33 +101,33 @@ UI Features
 ⚠️ Input validation indicators
 
 Gemini AI Integration 🧠
-Architecture Flow
+ - Architecture Flow
 
-sequenceDiagram
-    Frontend->>Backend: POST /api/ask {problemUrl, question}
-    Backend->>Gemini: Structured Prompt
-    Gemini->>Backend: Raw Response
-    Backend->>Frontend: Validated & Formatted Response
+        sequenceDiagram
+            Frontend->>Backend: POST /api/ask {problemUrl, question}
+            Backend->>Gemini: Structured Prompt
+            Gemini->>Backend: Raw Response
+            Backend->>Frontend: Validated & Formatted Response
 
 Prompt Engineering
 // controllers/prompts.js
-const createPrompt = (problemUrl, userQuestion) => {
-  return `You are an expert DSA mentor...`;
-}
+    const createPrompt = (problemUrl, userQuestion) => {
+      return `You are an expert DSA mentor...`;
+    }
 
-Contextual Prompts: Maintains conversation history
+-Contextual Prompts: Maintains conversation history
 
-Response Constraints: Enforces 3-sentence maximum
+-Response Constraints: Enforces 3-sentence maximum
 
-Learning Scaffolding: Progressive hint system
+-Learning Scaffolding: Progressive hint system
 
 Contributing 🤝
-Fork the repository
+-Fork the repository
 
-Create feature branch: git checkout -b feature/your-feature
+-Create feature branch: git checkout -b feature/your-feature
 
-Commit changes: git commit -m 'Add some feature'
+-Commit changes: git commit -m 'Add some feature'
 
-Push to branch: git push origin feature/your-feature
+-Push to branch: git push origin feature/your-feature
 
-Open a Pull Request
+-Open a Pull Request
